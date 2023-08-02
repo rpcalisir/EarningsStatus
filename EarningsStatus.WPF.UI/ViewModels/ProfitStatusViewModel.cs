@@ -14,13 +14,13 @@ namespace EarningsStatus.WPF.UI.ViewModels
         public ObservableCollection<GoldViewModel> _golds;
         public IEnumerable<GoldViewModel> Golds => _golds;
 
-        public int TotalPortfolioGoldAmount => _golds.Sum(g => g.PurchasedAmount);
-        public decimal TotalPortfolioCostAverage => TotalPortfolioGoldAmount/_golds.Sum(g => g.PurchasedPrice);
-        public decimal TotalPortfolioLoan => _golds.Sum(g => g.LoanAmount);
-        public decimal TotalPortfolioInterest => _golds.Sum(g => g.Interest);
-        public decimal TotalPortfolioCost => _golds.Sum(g => g.TotalCost);
+        public int PortfolioGoldAmount => _golds.Sum(g => g.PurchasedAmount);
+        public decimal PortfolioCostAverage => PortfolioGoldAmount/_golds.Sum(g => g.PurchasedPrice);
+        public decimal PortfolioLoan => _golds.Sum(g => g.LoanAmount);
+        public decimal PortfolioInterest => _golds.Sum(g => g.Interest);
+        public decimal PortfolioCost => _golds.Sum(g => g.TotalCost);
         public int CurrentGoldPrice => 1700; //TODO get the current gold price with API
-        public decimal ProfitAndLossStatus => (TotalPortfolioGoldAmount * CurrentGoldPrice) - TotalPortfolioInterest;
+        public decimal PortfolioEarningStatus => (PortfolioGoldAmount * CurrentGoldPrice) - PortfolioInterest;
 
         public ProfitStatusViewModel()
         {
