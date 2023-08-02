@@ -79,8 +79,8 @@ namespace EarningsStatus.WPF.UI.ViewModels
             }
         }
 
-        public ICommand AddGoldToPortfolioCommand { get; }
-        public ICommand AddGoldCancelCommand { get; }
+        public ICommand AddToPortfolioCommand { get; }
+        public ICommand CancelCommand { get; }
 
     }
 }

@@ -18,9 +18,9 @@ namespace EarningsStatus.WPF.UI.Views
     /// <summary>
     /// Interaction logic for GoldView.xaml
     /// </summary>
-    public partial class GoldView : UserControl
+    public partial class AddGoldView : UserControl
     {
-        public GoldView()
+        public AddGoldView()
         {
             InitializeComponent();
         }
