@@ -11,17 +11,20 @@ namespace EarningsStatus.WPF.UI.ViewModels
 {
     public class GoldViewModel: ViewModelBase
     {
-        public GoldModel _goldModel;
+        public Gold _goldModel;
         public int Id => _goldModel.Id;
         public decimal LoanAmount => _goldModel.LoanAmount;
         public decimal LoanRepayment => _goldModel.LoanRepayment;
         public ushort NumberOfInstallments => _goldModel.NumberOfInstallments;
         public int PurchasedAmount => _goldModel.PurchasedAmount;
-        public DateTime StartDate => _goldModel.StartDate;
+        public decimal PurchasedPrice => _goldModel.PurchasedPrice;
+
+        public decimal TotalCost => _goldModel.TotalCost;
+        public string StartDate => _goldModel.StartDate.ToString("d");
         public string EndDate => _goldModel.EndDate;
         public decimal Interest => _goldModel.Interest;
 
-        public GoldViewModel(GoldModel goldModel)
+        public GoldViewModel(Gold goldModel)
         {
             _goldModel = goldModel;
         }

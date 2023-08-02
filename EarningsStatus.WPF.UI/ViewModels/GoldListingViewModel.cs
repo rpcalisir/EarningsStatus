@@ -22,7 +22,8 @@ namespace EarningsStatus.WPF.UI.ViewModels
         {
             _golds = new ObservableCollection<GoldViewModel>();
 
-            _golds.Add(new GoldViewModel(new GoldModel(10000, 12000, 12, 20, new DateTime(2023, 8, 2))));
+            _golds.Add(new GoldViewModel(new Gold(10000, 12000, 12, 20, 1350, new DateTime(2023, 3, 27))));
+            _golds.Add(new GoldViewModel(new Gold(18000, 23000, 12, 67, 1400, new DateTime(2023, 5, 14))));
 
             MessageBox.Show("OK");
         }

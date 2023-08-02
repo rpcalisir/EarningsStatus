@@ -11,7 +11,7 @@ namespace EarningsStatus.WPF.UI.ViewModels
         public ViewModelBase CurrentViewModel { get; }
         public MainViewModel()
         {
-            CurrentViewModel = new AddGoldViewModel();
+            CurrentViewModel = new GoldListingViewModel();
         }
     }
 }

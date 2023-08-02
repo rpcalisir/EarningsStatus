@@ -8,7 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="dbo\Tables\" />
     <Folder Include="Exceptions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.143" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="7.0.9" />
   </ItemGroup>
 
 </Project>

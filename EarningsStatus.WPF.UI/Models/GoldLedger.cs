@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace EarningsStatus.WPF.UI.Models
 {
-    public class GoldLedgerModel
+    public class GoldLedger
     {
-        private readonly List<GoldModel> _golds;
+        private readonly List<Gold> _golds;
 
-        public GoldLedgerModel()
+        public GoldLedger()
         {
-            _golds = new List<GoldModel>();
+            _golds = new List<Gold>();
         }
 
-        public void AddGold(GoldModel gold)
+        public void AddGold(Gold gold)
         {
             _golds.Add(gold);
         }
 
-        public IEnumerable<GoldModel > GetGolds()
+        public IEnumerable<Gold > GetGolds()
         {
             return _golds;
         }
