@@ -1,8 +1,11 @@
-﻿using System;
+﻿using EarningsStatus.WPF.UI.Commands;
+using EarningsStatus.WPF.UI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Input;
 
 namespace EarningsStatus.WPF.UI.ViewModels
@@ -51,20 +54,6 @@ namespace EarningsStatus.WPF.UI.ViewModels
             }
         }
 
-        private DateTime _purchaseDate;
-        public DateTime PurchaseDate
-        {
-            get
-            {
-                return _purchaseDate;
-            }
-            set
-            {
-                _purchaseDate = value;
-                OnPropertyChanged(nameof(PurchaseDate));
-            }
-        }
-
         private int _purchasedAmount;
         public int PurchasedAmount
         {
@@ -79,8 +68,41 @@ namespace EarningsStatus.WPF.UI.ViewModels
             }
         }
 
-        public ICommand AddToPortfolioCommand { get; }
+        private int _purchasedPrice;
+        public int PurchasedPrice
+        {
+            get
+            {
+                return _purchasedPrice;
+            }
+            set
+            {
+                _purchasedPrice = value;
+                OnPropertyChanged(nameof(PurchasedPrice));
+            }
+        }
+
+        private DateTime _purchaseDate = DateTime.Now;
+        public DateTime PurchaseDate
+        {
+            get
+            {
+                return _purchaseDate;
+            }
+            set
+            {
+                _purchaseDate = value;
+                OnPropertyChanged(nameof(PurchaseDate));
+            }
+        }
+
+
+        public ICommand AddGoldToPortfolioCommand { get; }
         public ICommand CancelCommand { get; }
 
+        public AddGoldViewModel()
+        {
+            AddGoldToPortfolioCommand = new AddGoldToPortfolioCommand(this);
+        }
     }
 }

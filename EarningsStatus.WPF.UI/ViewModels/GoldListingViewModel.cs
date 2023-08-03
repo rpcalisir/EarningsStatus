@@ -14,10 +14,8 @@ namespace EarningsStatus.WPF.UI.ViewModels
 {
     public class GoldListingViewModel: ViewModelBase
     {
-        public ObservableCollection<Gold> _golds;
-
+        private readonly ObservableCollection<Gold> _golds;
         public ObservableCollection<Gold> Golds => _golds;
-
 
         public GoldListingViewModel()
         {
@@ -27,7 +25,7 @@ namespace EarningsStatus.WPF.UI.ViewModels
             //_g
             //_golds.Add(new GoldViewModel(new Gold(18000, 23000, 12, 67, 1400, new DateTime(2023, 5, 14))));
 
-            GoldTableDataCreatorUtility.CreateGoldTableData();
+            //GoldTableDataCreatorUtility.CreateGoldTableData();
 
             using (GoldContext context = new GoldContext())
             {

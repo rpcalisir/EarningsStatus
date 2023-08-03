@@ -24,14 +24,14 @@ namespace EarningsStatus.WPF.UI.DataAccess.Utilities
             //    new Gold(10000, 12000, 12, 20, 1350, new DateTime(2023, 3, 28)),
             //    new Gold(18000, 23000, 12, 67, 1400, new DateTime(2023, 5, 14))
             //};
-            var entity = new Gold(10000, 12000, 12, 20, 1350, new DateTime(2023, 3, 27));
+            //var entity = new Gold(10000, 12000, 12, 20, 1350, new DateTime(2023, 3, 27));
 
-            using (var context = new GoldContext())
-            {
-                var addedEntity = context.Entry(entity);
-                addedEntity.State = EntityState.Added;
-                context.SaveChanges();
-            }
+            //using (var context = new GoldContext())
+            //{
+            //    var addedEntity = context.Entry(entity);
+            //    addedEntity.State = EntityState.Added;
+            //    context.SaveChanges();
+            //}
 
             //using (GoldContext goldContext = new GoldContext())
             //{
